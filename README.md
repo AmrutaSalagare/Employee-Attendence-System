@@ -186,7 +186,14 @@ The frontend application will start on http://localhost:3000
 
 ## Screenshots
 
-[Add screenshots of your application here]
+### Login Page
+![Login Page](Screenshots/Screenshot%202025-11-30%20165845.png)
+
+### Employee Dashboard
+![Employee Dashboard](Screenshots/Screenshot%202025-11-30%20170038.png)
+
+### Manager Dashboard
+![Manager Dashboard](Screenshots/Screenshot%202025-11-30%20170108.png)
 
 ## Project Structure
 
