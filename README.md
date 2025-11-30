@@ -53,8 +53,8 @@ Before running this application, make sure you have the following installed:
 ### 1. Clone the repository
 
 ```bash
-git clone <your-repository-url>
-cd employee-attendance-system
+git clone https://github.com/AmrutaSalagare/Employee-Attendence-System.git
+cd Employee-Attendence-System
 ```
 
 ### 2. Backend Setup
@@ -140,59 +140,6 @@ npm start
 ```
 
 The frontend application will start on http://localhost:3000
-
-## API Endpoints
-
-### Auth
-- `POST /api/auth/register` - Register new user
-- `POST /api/auth/login` - Login user
-- `GET /api/auth/me` - Get current user
-
-### Attendance (Employee)
-- `POST /api/attendance/checkin` - Check in
-- `POST /api/attendance/checkout` - Check out
-- `GET /api/attendance/my-history` - My attendance history
-- `GET /api/attendance/my-summary` - Monthly summary
-- `GET /api/attendance/today` - Today's status
-
-### Attendance (Manager)
-- `GET /api/attendance/all` - All employees attendance
-- `GET /api/attendance/employee/:id` - Specific employee
-- `GET /api/attendance/summary` - Team summary
-- `GET /api/attendance/export` - Export CSV
-- `GET /api/attendance/today-status` - Who's present today
-
-### Dashboard
-- `GET /api/dashboard/employee` - Employee stats
-- `GET /api/dashboard/manager` - Manager stats
-
-## Database Schema
-
-### Users Collection
-```javascript
-{
-  name: String,
-  email: String (unique),
-  password: String (hashed),
-  role: String (employee/manager),
-  employeeId: String (unique, e.g., EMP001),
-  department: String,
-  createdAt: Date
-}
-```
-
-### Attendance Collection
-```javascript
-{
-  userId: ObjectId (ref: User),
-  date: Date,
-  checkInTime: Date,
-  checkOutTime: Date,
-  status: String (present/absent/late/half-day),
-  totalHours: Number,
-  createdAt: Date
-}
-```
 
 ## Features Details
 
@@ -284,20 +231,6 @@ employee-attendance-system/
 └── README.md
 ```
 
-## Troubleshooting
-
-### MongoDB Connection Error
-- Make sure MongoDB is running: `mongod`
-- Check if the MongoDB URI in `.env` is correct
-
-### Port Already in Use
-- Backend: Change PORT in backend/.env
-- Frontend: Change port using `PORT=3001 npm start`
-
-### CORS Issues
-- Make sure backend CORS is configured to allow frontend origin
-- Check if API_URL in frontend/.env is correct
-
 ## Development
 
 To run in development mode with hot reload:
@@ -333,24 +266,9 @@ This creates an optimized production build in the `build` folder.
 ### Frontend (.env)
 - `REACT_APP_API_URL` - Backend API URL
 
-## Contributing
-
-1. Fork the repository
-2. Create your feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request
-
-## License
-
-ISC
-
 ## Author
 
 **Name:** Amruta Salagare  
 **College:** ATME College of Engineering, Mysore  
 **Contact:** 9008008973
 
----
-
-**Note**: This is a demonstration project. For production use, implement additional security measures, input validation, and error handling.
